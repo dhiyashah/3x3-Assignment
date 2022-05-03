@@ -89,12 +89,13 @@ void draw() {
     fill(black);
     rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
   } //Button 3
-  if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight ) {} else {} //Button 4 (Reset), the whole section
-  fill(black);
-  rect(buttonX[1], buttonY[1], buttonWidth[1], buttonHeight[1]);
-  rect(buttonX[2], buttonY[2], buttonWidth[2], buttonHeight[2]);
-  rect(buttonX[3], buttonY[3], buttonWidth[3], buttonHeight[3]);
-  fill(resetWhite); //Best Practice
+  if ( mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight ) {
+    fill(yellow);
+    rect(ptX[3], ptY[3], rectWidth, rectHeight);
+  } else {
+    fill(black);
+    rect(ptX[3], ptY[3], rectWidth, rectHeight);
+  } //Button 4 (Reset), the whole section
   //
   fill(black);
   //Starting pts for rect() must be 1-9 & filled black
