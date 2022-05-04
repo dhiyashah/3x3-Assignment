@@ -58,7 +58,11 @@ void setup()
 void draw() {
   //Rectangles must be 3 by 3
   rect(ptX[1], ptY[1], rectWidth, rectHeight);
-  rect(ptX[2], ptY[2], rectWidth, rectHeight);
+  //
+  //fill();
+  rect(ptX[2], ptY[2], rectWidth, rectHeight); //Buttons change the colour of RECT2
+  fill(resetWhite);
+  //
   rect(ptX[3], ptY[3], rectWidth, rectHeight);
   rect(ptX[5], ptY[5], rectWidth, rectHeight);
   rect(ptX[6], ptY[6], rectWidth, rectHeight);
@@ -126,6 +130,18 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
+  if (mouseX>=buttonX[1] && mouseX<=buttonX[1]+buttonWidth[1] && mouseY>=buttonY[1] && mouseY<=buttonY[1]+buttonHeight[1]) {
+    println("BTN 1 Activated");
+  }
+  if (mouseX>=buttonX[2] && mouseX<=buttonX[2]+buttonWidth[2] && mouseY>=buttonY[2] && mouseY<=buttonY[2]+buttonHeight[2]) {
+    println("BTN 2 Activated");
+  }
+  if (mouseX>=buttonX[3] && mouseX<=buttonX[3]+buttonWidth[3] && mouseY>=buttonY[3] && mouseY<=buttonY[3]+buttonHeight[3]) {
+    println("BTN 3 Activated");
+  }
+  if (mouseX>=ptX[3] && mouseX<=ptX[3]+rectWidth && mouseY>=ptY[3] && mouseY<=ptY[3]+rectHeight) {
+    println("BTN 4 Activated");
+  }
 }//End mousePressed
 //
 //End MAIN Program
